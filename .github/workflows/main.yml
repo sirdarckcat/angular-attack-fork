@@ -7,6 +7,6 @@ jobs:
     steps:
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
+          SUPER_SECRET: ${{ secrets.SECRETFORBUG }}
         run: |
           echo "$SUPER_SECRET" > /tmp/secret.txt
