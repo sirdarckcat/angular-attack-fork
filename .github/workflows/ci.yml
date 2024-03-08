@@ -75,7 +75,7 @@ jobs:
         run: yarn devtools:build:chrome
 
   test:
-    runs-on: ubuntu-latest-4core
+    runs-on: ubuntu-latest
     steps:
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
@@ -91,7 +91,7 @@ jobs:
         run: yarn test:ci
 
   aio:
-    runs-on: ubuntu-latest-4core
+    runs-on: ubuntu-latest
     steps:
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
@@ -112,7 +112,7 @@ jobs:
 
   adev:
     runs-on:
-      labels: ubuntu-latest-4core
+      labels: ubuntu-latest
     steps:
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
@@ -127,7 +127,7 @@ jobs:
 
   aio-local:
     runs-on:
-      labels: ubuntu-latest-4core
+      labels: ubuntu-latest
     steps:
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
@@ -212,7 +212,7 @@ jobs:
 
   zone-js:
     runs-on:
-      labels: ubuntu-latest-4core
+      labels: ubuntu-latest
     steps:
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@c83e99a12397014162531ca125c94549db55dd84
@@ -259,7 +259,7 @@ jobs:
   bazel-saucelabs:
     # TODO: Replace legacy job with Bazel saucelabs job.
     if: github.event_name == 'push'
-    runs-on: ubuntu-latest-4core
+    runs-on: ubuntu-latest
     env:
       JOBS: 2
     steps:
